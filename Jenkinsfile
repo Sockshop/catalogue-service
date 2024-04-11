@@ -62,8 +62,8 @@ agent any
                             echo "Namespace '$NAMESPACE' created."
                         }
                         
-                        sh 'kubectl apply -f ./*.yaml -n $NAMESPACE'
-                        //sh 'kubectl apply -f ./service.yaml -n $NAMESPACE'
+                        sh 'kubectl apply -f ./deployment.yaml -n $NAMESPACE'
+                        sh 'kubectl apply -f ./service.yaml -n $NAMESPACE'
                         sh 'aws configure set output text'
                         sh 'aws eks list-clusters'
                         sh 'kubectl config view'
