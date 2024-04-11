@@ -70,6 +70,7 @@ agent any
                         sh 'kubectl cluster-info --kubeconfig .kube/config'                
                     }
                 }
-            }    
+            } 
+        }       
     }
 }
